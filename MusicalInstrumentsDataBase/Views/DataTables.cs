@@ -19,29 +19,51 @@ namespace Views
             dataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView.RowHeadersVisible = false;
 
-            dataGridView.ColumnCount = 13;
+            dataGridView.ColumnCount = 12;
             dataGridView.Columns[0].HeaderText = "Название дробилки";
-            dataGridView.Columns[1].HeaderText = "Стоимость";
-            dataGridView.Columns[2].HeaderText = "Мощность";
-            dataGridView.Columns[3].HeaderText = "Макс. размер питания";
-            dataGridView.Columns[4].HeaderText = "Производительность";
-            dataGridView.Columns[5].HeaderText = "Масса";
+            dataGridView.Columns[1].HeaderText = "Стоимость (руб)";
+            dataGridView.Columns[2].HeaderText = "Мощность (кВт)";
+            dataGridView.Columns[3].HeaderText = "Макс. размер питания (мм)";
+            dataGridView.Columns[4].HeaderText = "Производительность (т/ч)";
+            dataGridView.Columns[5].HeaderText = "Масса (кг)";
             dataGridView.Columns[6].HeaderText = "Кол-во двигателей";
-            dataGridView.Columns[7].HeaderText = "Оценка";
-            dataGridView.Columns[8].HeaderText = "Страна";
-            dataGridView.Columns[9].HeaderText = "Тип";
-            dataGridView.Columns[10].HeaderText = "Длина";
-            dataGridView.Columns[11].HeaderText = "Ширина";
-            dataGridView.Columns[12].HeaderText = "Высота";
+            dataGridView.Columns[7].HeaderText = "Страна";
+            dataGridView.Columns[8].HeaderText = "Тип";
+            dataGridView.Columns[9].HeaderText = "Длина (мм)";
+            dataGridView.Columns[10].HeaderText = "Ширина (мм)";
+            dataGridView.Columns[11].HeaderText = "Высота (мм)";
+
+            Sample.coastStartNumericUpDown = coastStartNumericUpDown;
+            Sample.coastEndNumericUpDown = coastEndNumericUpDown;
+
+            Sample.powerStartNumericUpDown = powerStartNumericUpDown;
+            Sample.powerEndNumericUpDown = powerEndNumericUpDown;
+
+            Sample.maxSizeStartNumericUpDown = maxSizeStartNumericUpDown;
+            Sample.maxSizeEndNumericUpDown = maxSizeEndNumericUpDown;
+
+            Sample.performanceStartNumericUpDown = performanceStartNumericUpDown;
+            Sample.performancEndNumericUpDown = performanceEndNumericUpDown;
+           
+            Sample.massStartNumericUpDown = massStartNumericUpDown;
+            Sample.massEndNumericUpDown = massEndNumericUpDown;
+            
+            Sample.numberEnginesStartNumericUpDown = numberEnginesStartNumericUpDown;
+            Sample.numberEnginesEndNumericUpDown = numberEnginesEndNumericUpDown;
+
+            Sample.stateСheckedListBox = stateСheckedListBox;
+            Sample.typeСheckedListBox = typeCheckedListBox;
+            
+            Sample.lengthStartNumericUpDown = lengthStartNumericUpDown;
+            Sample.lengthEndNumericUpDown = lengthEndТumericUpDown;
+            
+            Sample.widthStartNumericUpDown = widthStartNumericUpDown;
+            Sample.widthEndNumericUpDown = widthEndNumericUpDown;
+            
+            Sample.hightStartNumericUpDown = hightStartNumericUpDown;
+            Sample.hightEndNumericUpDown = hightEndNumericUpDown;
 
             ManagerPresenter managerPresenter = new ManagerPresenter(this);
-
-            CheckBox[] checkBox = Sample.GetCheckBoxes();
-
-            for (int i = 0; i < checkBox.Count(); i++)
-            {
-                panel1.Controls.Add(checkBox[i]);
-            }
         }
 
         public void ShowView()

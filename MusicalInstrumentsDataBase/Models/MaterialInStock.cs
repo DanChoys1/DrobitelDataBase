@@ -16,7 +16,6 @@ namespace MusicalInstrumentsDataBase.Models.Tables
         public int Performance { get; set; }
         public int Mass { get; set; }
         public int NumberEngines { get; set; }
-        public int Grade { get; set; }
         public string Side { get; set; }
         public string Type { get; set; }
         public int Length { get; set; }
